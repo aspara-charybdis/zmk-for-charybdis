@@ -3,7 +3,11 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-on: [push, pull_request, workflow_dispatch]
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -11,10 +15,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
       - name: Initialize west
         run: west init -l .
+
       - name: Update dependencies
         run: west update
+
       - name: Build configuration
         uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-

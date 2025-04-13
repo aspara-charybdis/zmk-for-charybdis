@@ -2,7 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
+#include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 9000  // default: 600
 
@@ -28,12 +28,12 @@
 
         Base {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3                &kp N4        &kp N5          &kp N6          &kp N7       &kp N8     &kp N9   &kp N0     &kp BSPC
-&kp ESCAPE      &kp Q   &kp W   &kp E                 &kp R         &kp T           &kp Y           &kp U        &kp I      &kp O    &kp P      &kp DEL
-&kp TAB         &kp A   &kp S   &kp D                 &kp F         &kp G           &kp H           &kp J        &kp K      &kp L    &kp SEMI   &kp APOS
-&kp LEFT_SHIFT  &kp Z   &kp X   &kp C                 &kp V         &kp B           &kp N           &kp M        &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_ALT LEFT_WIN
-                                &mt LCTRL LANGUAGE_5  &lt 3 SPACE   &kp INT_KANA    &kp BACKSPACE   &lt 1 ENTER
-                                                      &kp LEFT_ALT  &kp SPACE       &kp DOWN_ARROW
+&kp ESC         &kp N1                   &kp N2     &kp N3                  &kp N4        &kp N5          &kp N6          &kp N7       &kp N8     &kp N9   &kp N0     &kp BSPC
+&kp ESCAPE      &kp LANG_ZENKAKUHANKAKU  &kp LANG5  &kp LANGUAGE_5          &kp R         &kp T           &kp Y           &kp U        &kp I      &kp O    &kp P      &kp DEL
+&kp TAB         &kp A                    &kp S      &kp D                   &kp F         &kp G           &kp H           &kp J        &kp K      &kp L    &kp SEMI   &kp APOS
+&kp LEFT_SHIFT  &kp Z                    &kp X      &kp C                   &kp V         &kp B           &kp N           &kp M        &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_ALT LEFT_WIN
+                                                    &mt LCTRL INT_MUHENKAN  &lt 3 SPACE   &kp INT_KANA    &kp BACKSPACE   &lt 1 ENTER
+                                                                            &kp LEFT_ALT  &kp SPACE       &kp DOWN_ARROW
             >;
 
             trackball-bindings = <&tmv_coarse>;
